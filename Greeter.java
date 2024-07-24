@@ -17,6 +17,12 @@ public class Greeter {
   }
 
   public static void main(String[] args) {
+    // Check the length of args
+    if(args.length < 3){
+      // Modify the printing content
+      System.out.println("Error: Expected 3 arguments: <language> <country> <name>");
+      System.exit(1); // Exit with an error code
+    }
     String language = args[0];
     String country = args[1];
     String name = args[2];
